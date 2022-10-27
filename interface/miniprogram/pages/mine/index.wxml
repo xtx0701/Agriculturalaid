@@ -1,0 +1,52 @@
+<view>
+    <view class="userMessageBox" >
+        <view>
+            <image src="{{isLogin?userInfo.avatarUrl:'https://ts1.cn.mm.bing.net/th?id=OIP-C.ct8lqyu5nQ1q_anY6miS1wHaFz&w=176&h=170&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2'}}" />
+        </view>
+        <view bindtap="{{!isLogin?'userLogin':''}}" >
+            {{isLogin?userInfo.nickName:'登陆'}}
+        </view>
+    </view>
+
+    <view class="userPayBox" >
+        <view>
+            <view>
+                我的订单
+            </view>
+        </view>
+        <view>
+            <view wx:for="{{mineOrderData}}" wx:key="name" >
+               <view>
+                <image src="{{item.imageUrl}}" />
+               </view>
+               <view>
+                {{item.name}}
+               </view>
+            </view>
+        </view>
+    </view>
+
+    <view class="userOptionsBox" >
+        <view wx:for="{{mineOptionsData}}" wx:key="name" bindtap="{{item.method}}"  >
+            <view>
+                <image src="{{item.imageUrl}}" />
+            </view>
+            <view>
+                {{item.name}}
+            </view>
+        </view>
+        <view>
+            <view>
+                <image src="../../images/mine_callback.png" />
+            </view>
+            <view>
+                客服
+            </view>
+            <button open-type="contact" plain ></button>
+        </view>
+    </view>
+
+    <view class="signOutButton" bindtap="{{isLogin?'signOut':''}}" >
+        退出登陆
+    </view>
+</view>

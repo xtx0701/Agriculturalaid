@@ -1,0 +1,64 @@
+<view class="mineMessageBox" >
+    <view>
+        基本信息
+    </view>
+    <view class="mineMessage" >
+        <view>
+            <view>
+                头像
+            </view>
+            <view>
+                <image src="https://thirdwx.qlogo.cn/mmopen/vi_32/mnV3oojzHlNUeaKr5NPloNt88Y3iawA4PuVB495ia0gvke9PNmNkZfuvgCD5qH6vRic0qdJBWaeUEcMKJbO1NBB8Q/132" />
+            </view>
+            <view>
+                <image src="../../images/right.png" />
+            </view>
+        </view>
+         <view>
+            <view>
+                姓名
+            </view>
+            <view bindtap="openInput" >
+                {{mineMessage.name?mineMessage.name:'请填写'}}
+            </view>
+            <view>
+                <image src="../../images/right.png" />
+            </view>
+        </view>
+         <view>
+            <view>
+                性别
+            </view>
+            <view bindtap="changeUserGender" >
+                {{mineMessage.gender?mineMessage.gender:'保密'}}
+            </view>
+            <view>
+                <image src="../../images/right.png" />
+            </view>
+        </view>
+         <view>
+            <view>
+                生日
+            </view>
+            <view>
+               <picker mode="date" bindchange="changePicker" data-name="birthday" >{{mineMessage.birthday?mineMessage.birthday:'请选择日期'}}</picker>
+            </view>
+            <view>
+                <image src="../../images/right.png" />
+            </view>
+        </view>
+         <view>
+            <view>
+                地区
+            </view>
+            <view>
+                <picker mode="region" bindchange="changePicker" data-name="region" >{{mineMessage.region?mineMessage.region:'请选择地区'}}</picker>
+            </view>
+            <view>
+                <image src="../../images/right.png" />
+            </view>
+        </view>
+        
+    </view>
+</view>
+<userInput wx:if="{{isShowInput}}" bind:changeUserName="changeUserName" />

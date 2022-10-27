@@ -1,0 +1,146 @@
+@import "../../app.scss";
+
+.shopBox {
+    @include flexBoxLayout;
+    width: 100%;
+    height: 180rpx;
+    border-radius: 10rpx;
+
+    .shop {
+        @include flexBoxLayout;
+        width: 95%;
+        height: 70%;
+        background-color: white;
+        $width: 20%,
+        50%,
+        30%;
+
+        @for $i from 1 through 3 {
+            >view:nth-child(#{$i}) {
+                border-radius: 10rpx;
+                @include flexBoxLayout;
+                width: nth($width, $i);
+                height: 100%;
+
+                @if $i==1 {
+                    >image {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                    }
+                }
+
+                @if $i==2 {
+                    justify-content: flex-start;
+                    padding-left: 10rpx;
+                    font-size: 25rpx;
+                    font-weight: bolder;
+                }
+
+                @if $i==3 {
+                    >span {
+                        @include flexBoxLayout;
+                        width: 120rpx;
+                        height: 50rpx;
+                        font-size: 24rpx;
+                        border: 1px solid #63be72;
+                        color: #63be72;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+.commodityBox {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 0rpx;
+    width: 95%;
+    border-radius: 20rpx;
+
+    .title {
+        height: 80rpx;
+        @include flexBoxLayout;
+        justify-content: flex-start;
+        padding-left: 10rpx;
+        font-size: 25rpx;
+        font-weight: bolder;
+    }
+
+    .commodity {
+        @include flexBoxLayout;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+
+        >view {
+            width: 47%;
+            background-color: white;
+
+            @for $i from 1 through 3 {
+                >view:nth-child(#{$i}) {
+                    border-radius: 20rpx;
+
+                    @if $i==1 {
+                        width: 100%;
+                        height: 250rpx;
+
+                        >image {
+                            border-radius: 20rpx;
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+
+                    @if $i==2 {
+                        width: 100%;
+                        border-radius: 0;
+                        font-size: 25rpx;
+                        padding: 10rpx 20rpx;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 2;
+                        line-height: 40rpx;
+                    }
+
+                    @if $i==3 {
+                        @include flexBoxLayout;
+                        border-radius: 0;
+                        height: 60rpx;
+
+                        @for $i from 1 through 2 {
+                            >p:nth-child(#{$i}) {
+                                width: 50%;
+                                @include flexBoxLayout;
+
+                                @if $i==1 {
+                                    color: #63be72;
+                                    padding-right: 30rpx;
+
+                                    >span {
+                                        font-size: 35rpx;
+                                    }
+                                }
+
+                                @if $i==2 {
+                                    box-sizing: border-box;
+                                    padding-left: 70rpx;
+
+                                    >image {
+                                        width: 40rpx;
+                                        height: 40rpx;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

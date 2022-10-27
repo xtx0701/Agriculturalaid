@@ -1,0 +1,65 @@
+@import "../../app.scss";
+
+.mineMessageBox {
+    width: 100%;
+
+    >view:nth-child(1) {
+        @include flexBoxLayout;
+        justify-content: flex-start;
+        padding-left: 20rpx;
+        color: rgba($color: #808080, $alpha: 0.7);
+        height: 70rpx;
+        font-size: 25rpx;
+    }
+
+    .mineMessage {
+        @include flexBoxLayout;
+        flex-direction: column;
+        width: 100%;
+        background-color: white;
+
+        >view:nth-child(1) {
+            height: 130rpx;
+
+            >view:nth-child(2) {
+                >image {
+                    width: 60rpx;
+                    height: 60rpx;
+                    border-radius: 50%;
+                }
+            }
+        }
+
+        >view {
+            width: 95%;
+            height: 100rpx;
+            @include flexBoxLayout;
+
+            >view:nth-child(1) {
+                @include flexBoxLayout;
+                justify-content: flex-start;
+                width: 20%;
+                font-size: 25rpx;
+                font-weight: bolder;
+            }
+
+            >view:nth-child(2) {
+                width: 70%;
+                @include flexBoxLayout;
+                justify-content: flex-start;
+                padding-left: 50rpx;
+                font-size: 27rpx;
+            }
+
+            >view:nth-child(3) {
+                flex: 1;
+                @include flexBoxLayout;
+
+                >image {
+                    width: 20rpx;
+                    height: 20rpx;
+                }
+            }
+        }
+    }
+}

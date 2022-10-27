@@ -1,0 +1,21 @@
+<view class="userInputBox" >
+    <view class="userInput" >
+        <view>
+            请输入姓名
+        </view>
+        <form class="form" bindsubmit="changeUserName" >
+            <view class="input">
+                <input type="text" name="input"/>
+            </view>
+            <view class="button">
+                <view>
+                    取消
+                </view>
+                <view>
+                <button form-type="submit"  plain  ></button>
+                    确认
+                </view>
+            </view>
+        </form>
+    </view>
+</view>

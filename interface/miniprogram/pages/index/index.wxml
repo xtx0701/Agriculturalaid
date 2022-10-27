@@ -1,0 +1,41 @@
+<!--pages/index/index.wxml-->
+<view>
+    <swiper indicator-dots="true" autoplay interval="2000" duration="2000" style="height:400rpx" indicator-active-color="rgb(255,255,255)" circular >
+        <block wx:for="{{imgUrls}}" wx:key="item" >
+            <swiper-item>
+                <image src="{{item}}" style="width:100%;height:100%"  />
+            </swiper-item>
+        </block>
+    </swiper>
+
+    <view class="shopBox" >
+        <view class="shop" >
+            <view><image src="../../images/shop.jpg" /></view>
+            <view>科成店铺</view>
+            <view><span bindtap="goShopPage" >进入</span></view>
+        </view>
+    </view>
+
+    <view class="commodityBox" >
+        <view class="title" >
+            本周精选
+        </view>
+        <view class="commodity" >
+            <view>
+                <view>
+                    <image src="https://desk-fd.zol-img.com.cn/t_s1440x900c5/g5/M00/02/01/ChMkJlbKxSGIYJepAAKvwTQNjKAAALHRQGrVIsAAq_Z430.jpg" />
+                </view>
+                <view>
+                        助力大芒果大芒果大芒果大芒果                  
+                </view>
+                <view>
+                    <p> ￥<span>19.7</span> </p>
+                    <p><image src="../../images/car_selected.png" /></p>
+                </view>
+            </view>
+            <view>
+               
+            </view>
+        </view>
+    </view>
+</view>

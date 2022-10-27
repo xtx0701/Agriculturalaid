@@ -1,0 +1,83 @@
+<view class="carBox" >
+    <view>
+        <view class="goodsOperation" >
+           <text style="margin-right:20rpx" bindtap="changeDeleteAge" > {{isDelete?'完成':'编辑'}}</text>
+        </view>
+        <view class="goodsList">
+            <view class="listData" wx:for="{{shopList}}" wx:key="name"  >
+               <view>
+                    <view style="background-color: {{item.isChose?'#63be72':'white'}};" bindtap="choose" data-index="{{index}}" >
+                        <image src="../../images/choose.png" wx:if="{{item.isChose}}" />
+                    </view>
+               </view>
+               <view>
+                <image src="{{item.imageUrl}}" />
+               </view>
+               <view>
+                <view>
+                    <text>{{item.name}}</text>
+                </view>
+                <view>
+                    <view>
+                        <text decode >五斤大果(10-12斤)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;∨&nbsp;&nbsp;</text>
+                    </view> 
+                </view>
+                <view>
+                    <view>
+                        <text style="font-size:20rpx" >￥</text><text style="font-size:27rpx" >{{item.price[0]}}</text><text style="font-size:20rpx" >.{{item.price[1]}}</text>
+                    </view>
+                    <view>
+                        <view>
+                            -
+                        </view>
+                        <view>
+                            {{item.num}} 
+                        </view>
+                        <view>
+                            +
+                        </view>
+                    </view>
+                </view>
+               </view>
+            </view>
+        </view>
+    </view>
+    <view class="nothingLogoBox" wx:if="{{isNoGoods}}"  >
+        <view>
+            <image src="../../images/car.png" />
+        </view>
+        <view>
+            购物车还是空的
+        </view>
+        <view>
+           <view bindtap="goIndex" >
+             去逛逛
+           </view>
+        </view>
+    </view>
+<view class="payTabbar" >
+    <view>
+        <view style="background-color: {{isAllChose?'#63be72':'white'}};" bindtap="chooseAll" >
+            <image src="../../images/choose.png" wx:if="{{isAllChose}}" />
+        </view>
+        <view>
+             全选
+        </view>
+    </view>
+    <view>
+        <view wx:if="{{!isDelete}}" >
+            合计:<text style="color:#63be72;padding-left:10rpx" >￥{{goodsNum}}</text>
+        </view>
+        <view wx:if="{{!isDelete}}" >
+            包含运费
+        </view>
+    </view>
+    <view>
+        <view>
+            {{isDelete?"删除":"结算"}}
+        </view>
+    </view>
+</view>
+
+
+</view>

@@ -1,0 +1,52 @@
+{
+        "pages": [
+                "pages/index/index",
+                "pages/mine/index",
+                "pages/classification/index",
+                "pages/car/index",
+                "pages/mineMessage/index",
+                "pages/shop/index",
+                "pages/detail/index"
+        ],
+        "tabBar": {
+                "color": "#d3d3d3",
+                "selectedColor": "#63be72",
+                "backgroundColor": "#FFFFFF",
+                "borderStyle": "white",
+                "list": [
+                        {
+                                "pagePath": "pages/index/index",
+                                "text": "首页",
+                                "iconPath": "./images/index.png",
+                                "selectedIconPath": "./images/index_selected.png"
+                        },
+                        {
+                                "pagePath": "pages/classification/index",
+                                "text": "分类",
+                                "iconPath": "./images/classification.png",
+                                "selectedIconPath": "./images/classification_selected.png"
+                        },
+                        {
+                                "pagePath": "pages/car/index",
+                                "text": "购物车",
+                                "iconPath": "./images/car.png",
+                                "selectedIconPath": "./images/car_selected.png"
+                        },
+                        {
+                                "pagePath": "pages/mine/index",
+                                "text": "个人中心",
+                                "iconPath": "./images/mine.png",
+                                "selectedIconPath": "./images/mine_selected.png"
+                        }
+                ]
+        },
+        "window": {
+                "backgroundColor": "#F6F6F6",
+                "backgroundTextStyle": "light",
+                "navigationBarBackgroundColor": "#ffffff",
+                "navigationBarTitleText": "云开发 QuickStart",
+                "navigationBarTextStyle": "black"
+        },
+        "sitemapLocation": "sitemap.json",
+        "style": "v2"
+}

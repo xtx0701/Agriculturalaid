@@ -1,0 +1,46 @@
+<!--pages/detail/index.wxml-->
+<view>
+<view class="title" >
+    <view><image src="../../images/shop.jpg" /></view>
+    <view>科成店铺</view>
+</view>
+    <swiper indicator-dots="true" autoplay interval="3000" duration="2000" style="height:600rpx" indicator-active-color="rgb(255,255,255)" circular >
+        <block wx:for="{{imgUrls}}" wx:key="item" >
+            <swiper-item>
+                <image src="{{item}}" style="width:100%;height:100%"  />
+            </swiper-item>
+        </block>
+    </swiper>
+
+    <view class="tabbar" >
+        <view>
+            <view>
+                <image src="../../images/mine_callback.png" />
+            </view>
+            <view>
+                客服
+            </view>
+            <button open-type="contact" plain  ></button>
+        </view>
+         <view>
+           <view>
+                <image src="../../images/mine_shop.png" />
+            </view>
+            <view>
+                店铺
+            </view>
+        </view>
+         <view>
+           <view>
+                <image src="../../images/mine_shopCar.png" />
+            </view>
+            <view bindtap="goShopCar" >
+                购物车
+            </view>
+        </view>
+         <view>
+                <span>加入购物车</span>
+                <span>立即购买</span>
+        </view>
+    </view>
+</view>

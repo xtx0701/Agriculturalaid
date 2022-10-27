@@ -1,0 +1,33 @@
+{
+        "description": "项目配置文件",
+        "cloudfunctionRoot": "cloudfunctions/",
+        "packOptions": {
+                "ignore": [],
+                "include": []
+        },
+        "miniprogramRoot": "miniprogram/",
+        "compileType": "miniprogram",
+        "projectname": "ts-sass-demo",
+        "setting": {
+                "useCompilerPlugins": [
+                        "typescript",
+                        "sass"
+                ],
+                "babelSetting": {
+                        "ignore": [],
+                        "disablePlugins": [],
+                        "outputPath": ""
+                }
+        },
+        "simulatorType": "wechat",
+        "simulatorPluginLibVersion": {},
+        "condition": {},
+        "srcMiniprogramRoot": "miniprogram/",
+        "appid": "wx12b85369decd7076",
+        "libVersion": "2.26.2",
+        "editorSetting": {
+                "tabIndent": "insertSpaces",
+                "tabSize": 8
+        },
+        "cloudfunctionTemplateRoot": "cloudfunctionTemplate/"
+}

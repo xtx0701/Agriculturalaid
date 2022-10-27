@@ -1,0 +1,152 @@
+@import "../../app.scss";
+
+.userMessageBox {
+    @include flexBoxLayout;
+    flex-direction: column;
+    width: 100%;
+    height: 350rpx;
+    background-color: #63be72;
+    border-radius: 0 0 50rpx 50rpx;
+
+    >view:nth-child(1) {
+        width: 120rpx;
+        height: 120rpx;
+        margin-bottom: 10rpx;
+        border-radius: 50%;
+
+        >image {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+    }
+
+    >view:nth-child(2) {
+        @include flexBoxLayout;
+        width: 25%;
+        height: 60rpx;
+        font-size: 25rpx;
+        font-weight: bolder;
+        border-radius: 20rpx;
+    }
+}
+
+.userPayBox {
+    @include flexBoxLayout;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 20rpx;
+    height: 200rpx;
+    width: 90%;
+    position: relative;
+    top: -60rpx;
+    left: 50%;
+    transform: translateX(-50%);
+
+    >view:nth-child(1) {
+        @include flexBoxLayout;
+        justify-content: flex-start;
+        height: 30%;
+        width: 92%;
+        font-size: 23rpx;
+        font-weight: bolder;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+    }
+
+    >view:nth-child(2) {
+        @include flexBoxLayout;
+        flex-direction: row;
+        width: 100%;
+        height: 70%;
+
+        >view {
+            @include flexBoxLayout;
+            flex-direction: column;
+            width: 25%;
+            height: 100%;
+
+
+            >view:nth-child(1) {
+                height: 55%;
+                @include flexBoxLayout;
+
+                >image {
+                    width: 40rpx;
+                    height: 40rpx;
+                    margin-top: 25rpx;
+                }
+            }
+
+            >view:nth-child(2) {
+                @include flexBoxLayout;
+                height: 45%;
+                width: 100%;
+                font-size: 20rpx;
+                font-weight: bolder;
+            }
+        }
+    }
+}
+
+.userOptionsBox {
+    @include flexBoxLayout;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: white;
+    border-radius: 20rpx;
+    height: 150rpx;
+    width: 90%;
+    position: relative;
+    top: -40rpx;
+    left: 50%;
+    transform: translateX(-50%);
+
+
+    >view {
+        @include flexBoxLayout;
+        flex-direction: column;
+        width: 25%;
+        height: 100%;
+        position: relative;
+
+        >button {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        >view:nth-child(1) {
+            height: 55%;
+            @include flexBoxLayout;
+
+            >image {
+                width: 40rpx;
+                height: 40rpx;
+                margin-top: 25rpx;
+            }
+        }
+
+        >view:nth-child(2) {
+            @include flexBoxLayout;
+            height: 45%;
+            width: 100%;
+            font-size: 20rpx;
+            font-weight: bolder;
+        }
+    }
+}
+
+.signOutButton {
+    @include flexBoxLayout;
+    width: 400rpx;
+    height: 70rpx;
+    background-color: #63be72;
+    color: white;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 25rpx;
+    font-weight: bolder;
+    border-radius: 20rpx;
+}

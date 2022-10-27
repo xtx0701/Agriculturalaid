@@ -1,0 +1,86 @@
+@import "../../app.scss";
+
+.userInputBox {
+    background-color: rgba($color: #808080, $alpha: 0.3);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    .userInput {
+        background-color: white;
+        border-radius: 20rpx;
+        width: 65%;
+        height: 200rpx;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @include flexBoxLayout;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        >view:nth-child(1) {
+            @include flexBoxLayout;
+            width: 100%;
+            height: 30%;
+            font-size: 25rpx;
+            font-weight: bolder;
+        }
+
+        .form {
+            width: 100%;
+            flex: 1;
+
+            .input {
+                width: 100%;
+                height: 60%;
+                @include flexBoxLayout;
+
+                >input {
+                    background-color: #f6f6f6;
+                    border: 1px solid black;
+                    width: 70%;
+                    height: 40rpx;
+                    border-radius: 10rpx;
+                    font-size: 25rpx;
+                    padding-left: 10rpx;
+                }
+            }
+
+            .button {
+                @include flexBoxLayout;
+                width: 100%;
+                height: 40%;
+                font-size: 25rpx;
+                font-weight: bolder;
+
+                >view {
+                    @include flexBoxLayout;
+                    height: 100%;
+                    width: 50%;
+                    border-top: 1px solid rgba($color: #808080, $alpha: 0.3);
+                }
+
+                >view:nth-child(1) {
+                    color: grey;
+                    border-right: 1px solid rgba($color: #808080, $alpha: 0.3);
+                }
+
+                >view:nth-child(2) {
+                    position: relative;
+
+                    >button {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+}
